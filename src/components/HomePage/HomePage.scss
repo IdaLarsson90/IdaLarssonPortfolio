@@ -1,0 +1,25 @@
+@import "../../models/variables";
+
+.homePage {
+    // background-color: $light-grey;
+    header{
+
+        .headings {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem;
+            cursor: default;
+            h1 {
+                @include heading;
+                color: $dark-grey;
+                font-size: 4rem 
+            }
+            h2 {
+                @include subHeading;
+                font-size:1rem
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Indie+Flower&family=Rubik+Dirt&display=swap');
+
+$grey: #858484;
+$purple: #3346a8;
+$light-grey: #eee;
+$dark-grey:#1f1f1f;
+$yellow: #fbb807;
+$light-yellow: #faeecf;
+$dark-yellow: #e7aa01;
+$dark-red: #d63343;
+
+@mixin button {
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: 200ms;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: $dark-grey;
+  img {
+    height: 1rem;
+  }
+}
+@mixin primary-button {
+  @include button;
+  background-color: $purple;
+}
+
+// @mixin secondary-button {
+//   @include button;
+//   background-color: $light-grey;
+// }
+
+@mixin heading {
+  font-size: 7rem;
+  font-weight: 100;
+  font-family: 'Rubik Dirt', cursive;
+  color: $light-grey
+}
+
+@mixin subHeading {
+  font-family: 'Cutive Mono', monospace; 
+  color: $grey
+}
+
+@mixin paragraph {
+  padding: 0.5rem 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@mixin link {
+  color: $purple;
+  padding-right: 1rem;
+}

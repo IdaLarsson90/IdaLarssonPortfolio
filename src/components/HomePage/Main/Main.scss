@@ -1,0 +1,70 @@
+@import "../../../models/variables";
+
+.main {  
+    // background-color: $purple;
+    padding: 1.5rem;
+    article{
+        margin-bottom: 2rem;
+    }
+    
+    li{
+        @include paragraph;
+        // margin: 0.5rem 0;
+        list-style: none
+    }
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    .heading {
+        @include subHeading;
+        color: $dark-grey;
+    }
+    p {
+        @include paragraph;
+        line-height: 30px;
+    }
+}
+//LäggTill: Klick för att se stor bild
+.projectCard:nth-child(even) {
+    grid-template-areas: "thumbnail heading heading"
+                        "thumbnail desc desc"
+                        "thumbnail links links";
+}
+.projectCard:nth-child(odd) {
+    grid-template-areas: "heading heading thumbnail"
+                        "desc desc thumbnail"
+                        "links links thumbnail";
+}
+.projectCard {
+    // background-color: $grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    margin:2rem 0;
+    box-shadow: 0 0 10px $grey;
+    .thumbnail {
+        grid-area: thumbnail;
+        max-width: 300px;
+    }
+
+    .heading {
+        @include subHeading;
+        color: $purple;
+        grid-area: heading;
+        font-size: 2rem;
+       
+    }
+
+    .description {
+        grid-area: desc;
+        
+    }
+
+    .links {
+        grid-area: links;
+        a {
+            @include link;
+        }
+    }
+    
+}

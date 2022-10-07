@@ -1,0 +1,40 @@
+@import "../../models/variables";
+
+.introPage {
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/codeWallpaper.avif");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .headings {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        h1 {
+            @include heading;
+            animation:blinking 3.5s infinite;
+        }
+        h2 {
+            @include subHeading
+        }
+        button {
+            @include primary-button
+        }
+    }
+    
+}
+@keyframes blinking{
+    0% {opacity:0;}
+    9% {opacity:0;}
+    10% {opacity:.5;}
+    13% {opacity:0;}
+    20% {opacity:.5;}
+    25% {opacity:1;}
+    100% {scale: 1.1;}
+    }
